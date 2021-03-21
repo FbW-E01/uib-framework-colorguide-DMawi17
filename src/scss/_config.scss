@@ -1,0 +1,45 @@
+/*
+ 
+  __     __         _       _     _           
+  \ \   / /_ _ _ __(_) __ _| |__ | | ___  ___ 
+   \ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+    \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+     \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+                                              
+ 
+*/
+
+$first-line1: #ffc83f;
+$first-line2: #fa5e5b;
+$first-line3: #1d508d;
+$first-line4: #684379;
+
+$second-line1: #8f5ec7;
+$second-line2: #cebf1d;
+$second-line3: #FF6F91;
+$second-line4: #FF9671;
+
+
+/*
+ 
+   __  __ _      _       
+  |  \/  (_)_  _(_)_ __  
+  | |\/| | \ \/ / | '_ \ 
+  | |  | | |>  <| | | | |
+  |_|  |_|_/_/\_\_|_| |_|
+                         
+ 
+*/
+
+@mixin inner-part {
+    margin: auto;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+}
+
+@mixin set-bg($color) {
+    background: $color;    
+}
