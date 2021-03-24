@@ -1,3 +1,162 @@
 // This is where you can import other stylesheets or write your scss code
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "config";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-top {
+    padding: 5em;
+    background: #eee;
+    position: relative;
+}
+
+/*
+ 
+   _     _              _ 
+  | |   (_)_ __   ___  / |
+  | |   | | '_ \ / _ \ | |
+  | |___| | | | |  __/ | |
+  |_____|_|_| |_|\___| |_|
+                          
+ 
+*/
+
+.line-1 {
+    :nth-child(1) .card-top {
+        background: $first-line1;
+    }
+    :nth-child(2) .card-top {
+        background: $first-line2;
+    }
+    :nth-child(3) .card-top {
+        background: $first-line3;
+    }
+    :nth-child(4) .card-top {
+        background: $first-line4;
+    }
+}
+
+/*
+ 
+   _     _              ____  
+  | |   (_)_ __   ___  |___ \ 
+  | |   | | '_ \ / _ \   __) |
+  | |___| | | | |  __/  / __/ 
+  |_____|_|_| |_|\___| |_____|
+                              
+ 
+*/
+
+.line-2 {
+    :nth-child(1) .card-top {
+        @include set-bg(lighten($second-line1, 5%));
+        .inner {
+            @include inner-part;
+            background: $second-line1;
+        }
+    }
+    :nth-child(2) .card-top {
+        @include set-bg(lighten($second-line2, 5%));
+        .inner {
+            @include inner-part;
+            background: $second-line2;
+        }
+    }
+    :nth-child(3) .card-top {
+        @include set-bg(lighten($second-line3, 5%));
+        .inner {
+            @include inner-part;
+            background: $second-line3;
+        }
+    }
+    :nth-child(4) .card-top {
+        @include set-bg(lighten($second-line4, 5%));
+        .inner {
+            @include inner-part;
+            background: $second-line4;
+        }
+    }
+}
+
+/*
+ 
+   _____             ____  _       _     _           
+  |_   _|__  _ __   |  _ \(_)_   _(_) __| | ___ _ __ 
+    | |/ _ \| '_ \  | | | | \ \ / / |/ _` |/ _ \ '__|
+    | | (_) | |_) | | |_| | |\ V /| | (_| |  __/ |   
+    |_|\___/| .__/  |____/|_| \_/ |_|\__,_|\___|_|   
+            |_|                                      
+ 
+*/
+.custom-shape-divider-bottom-1616345170 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+/*
+ 
+    ____      _                                     _      
+   / ___|___ | | ___  _ __       ___ ___  _ __ ___ | |__   
+  | |   / _ \| |/ _ \| '__|____ / __/ _ \| '_ ` _ \| '_ \  
+  | |__| (_) | | (_) | | |_____| (_| (_) | | | | | | |_) | 
+   \____\___/|_|\___/|_|        \___\___/|_| |_| |_|_.__(_)
+                                                           
+ 
+*/
+.custom-shape-divider-bottom-1616345170 svg {
+    position: relative;
+    display: block;
+    width: calc(155% + 1.3px);
+    height: 292px;
+    transform: rotateY(180deg);
+}
+
+.one1 {
+    fill: $first-line2;
+}
+.one2 {
+    fill: $first-line3;
+}
+.one3 {
+    fill: $first-line4;
+}
+
+/*
+ 
+   ____        _   _                    ____  _          _           
+  | __ )  ___ | |_| |_ ___  _ __ ___   |  _ \(_)_   ____| | ___ _ __ 
+  |  _ \ / _ \| __| __/ _ \| '_ ` _ \  | | | | \ \ / / _` |/ _ \ '__|
+  | |_) | (_) | |_| || (_) | | | | | | | |_| | |\ V / (_| |  __/ |   
+  |____/ \___/ \__|\__\___/|_| |_| |_| |____/|_| \_/ \__,_|\___|_|   
+                                                                     
+ 
+*/
+.custom-shape-divider-top-1616345740 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1616345740 svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 317px;
+    z-index: -1;
+}
+
+.custom-shape-divider-top-1616345740 .shape-fill {
+    fill: $second-line4;
+}
